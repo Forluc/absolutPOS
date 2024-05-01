@@ -1,0 +1,24 @@
+{% extends "master.html" %}
+{% load static %}
+{% block main %}
+{% include "header.html" %}
+{% include "aside.html" %}
+<main class="container mt-header" xmlns="http://www.w3.org/1999/html">
+    <h1>Заполните все поля</h1>
+    <br>
+    <h3>Для дальнейшего сотрудничества</h3>
+    <br>
+    <br>
+    <form method="post">
+        {% csrf_token %}
+        {{ profile_form.company }}
+        {{ profile_form.address }}
+        {{ profile_form.direction }}
+        Компания недавно создалась: {{ profile_form.is_new }}<br><br>
+        <button type="submit" class="btn border-8 py-3 px-5 w-100 text-white fs_24 SelfStorage__bg_orange SelfStorage__btn2_orange">
+            Продолжить
+        </button>
+    </form>
+
+</main>
+{% endblock %}

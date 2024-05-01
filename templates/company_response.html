@@ -1,0 +1,30 @@
+{% extends "master.html" %}
+{% load static %}
+{% block main %}
+{% include "header.html" %}
+{% include "aside.html" %}
+<main class="container mt-header">
+
+    <h1>Заполните все поля</h1>
+    <br>
+    <h3>Для дальнейшего сотрудничества</h3>
+    <br>
+    <br>
+    <form method="post" onsubmit="showConfirmation()">
+        {% csrf_token %}
+        {{ survey_from.as_p }}
+        <button type="submit" class="btn border-8 py-3 px-5 w-100 text-white fs_24 SelfStorage__bg_orange SelfStorage__btn2_orange">
+            Продолжить
+        </button>
+    </form>
+
+
+</main>
+<script>
+    function showConfirmation() {
+        if (confirm('Спасибо за заявку, нажмите ОК, с вами скоро свяжутся')) {
+            window.location.href = "{% url 'index' %}";
+        }
+    }
+</script>
+{% endblock %}
