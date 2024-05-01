@@ -56,7 +56,7 @@ $ python manage.py runserver
   будут разные)
 - после ответа на доп.вопросы нужно подтвердить отправку, `нажать ОК`, и все ответы сохранятся
   в [google_forms](https://docs.google.com/forms/d/e/1FAIpQLSeW9h5sClsw1B7Mkum_Q7P6R5ewcGs1K5oCU9cSuhykTC51MA/viewform)
-  - после этого, будет `redirect` на главную
+- после этого, будет `redirect` на главную
 
 ## Цель проекта
 
